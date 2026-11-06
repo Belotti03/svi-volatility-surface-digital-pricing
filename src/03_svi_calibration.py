@@ -50,7 +50,7 @@ def main():
         
         # 4. Plotting the Volatility Smile
         plt.figure(figsize=(10, 6))
-        plt.scatter(k_market, w_market, color='red', label='Market Implied Variance (Noisy)', zorder=5)
+        plt.scatter(k_market, w_market, color='red', label='Market-Implied Total Variance', zorder=5)
         
         k_continuous = np.linspace(min(k_market), max(k_market), 100)
         w_svi = svi_total_variance(k_continuous, a_opt, b_opt, rho_opt, m_opt, sigma_opt)
